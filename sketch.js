@@ -3,6 +3,7 @@ var database;
 var foodS, foodStock;
 var dogHappy;
 var dog_Img;
+var dog;
 
 function preload()
 {
@@ -15,9 +16,9 @@ function setup() {
   createCanvas(500, 500);
   database = firebase.database();
 
-  var dog = createSprite(250, 250, 10, 10);
+  dog = createSprite(250, 250, 10, 10);
   
-  dog.addImage("image/Dog.png", dog_Img);
+  dog.addImage(dog_Img);
   
 
 
@@ -29,7 +30,7 @@ function setup() {
 
 function draw() {  
   background(46, 139, 87);
-  
+  dog.scale = 0.2;
   if(keyWentDown(UP_ARROW)){
     writeStock(foodS);
     dog.addImage(dogHappy)
