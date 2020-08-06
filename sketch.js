@@ -33,7 +33,7 @@ function draw() {
   dog.scale = 0.2;
   if(keyWentDown(UP_ARROW)){
     writeStock(foodS);
-    dog.addImage(dogHappy)
+    dog.addImage(dogHappy_Img);
   }
   
   drawSprites();
